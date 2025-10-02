@@ -16,7 +16,7 @@
     <style>
 
         :root{
-            --header-bg: #2f81cd;   /* header background */
+            --header-bg:#0e7490;   /* header background */
             --header-fg:#ffffff;   /* header text/icons */
             --footer-bg: #2f81cd;   /* footer background */
             --footer-fg:#e5e7eb;   /* footer text/links */
@@ -51,7 +51,7 @@
             fill:currentColor;
         }
         footer a:hover{ opacity:.85; }
-        w
+
             /* Make the Login button pop on dark header (optional) */
         header .btn-primary{
             background-color: #000a3a;
@@ -203,7 +203,7 @@
 
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h2 class="fs-2 fw-bold">Vehicles</h2>
-            <a href="/vehicle_add" class="add-button">Add Vehicle</a>
+            <a href="${pageContext.request.contextPath}/vehicle_add" class="add-button">Add Vehicle</a>
         </div>
         <div class="row">
             <c:forEach var="vehicle" items="${vehicles}">
@@ -216,7 +216,7 @@
                             <p class="card-text text-muted-gray">Year: ${vehicle.year}</p>
                             <p class="card-text text-muted-gray">Type: ${vehicle.type}</p>
                             <p class="card-text text-muted-gray">Status: ${vehicle.status}</p>
-                            <p class="card-text text-muted-gray">Pricing($): ${vehicle.pricing}</p>
+                            <p class="card-text text-muted-gray">Pricing(LKR): ${vehicle.pricing}</p>
                             <div class="d-flex gap-2 flex-wrap">
                                 <a href="/vehicle_details/${vehicle.id}" class="btn btn-outline-primary btn-sm">Details</a>
                                 <a href="/vehicle_edit/${vehicle.id}" class="btn btn-outline-secondary btn-sm">Edit</a>

@@ -12,8 +12,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 @Controller
-public class MainController {
+public class    MainController {
 
     private final VehicleService vehicleService;
 
@@ -23,7 +24,7 @@ public class MainController {
     }
 
     @GetMapping("/home")
-    public String home() {
+    public String index() {
         return "home";
     }
 
@@ -31,7 +32,7 @@ public class MainController {
     public String vehicleList(@RequestParam(value = "sortBy", required = false, defaultValue = "none") String sortBy,
                               @RequestParam(value = "statusFilter", required = false, defaultValue = "all") String statusFilter,
                               Model model) {
-        List<com.vehicle_mangement_system.backend.models.Vehicle> vehicles = vehicleService.getAllVehicles();
+        List<Vehicle> vehicles = vehicleService.getAllVehicles();
         if ("type".equals(sortBy)) {
             vehicles.sort((v1, v2) -> {
                 int compare = (v1.getType() != null ? v1.getType() : "").compareTo(v2.getType() != null ? v2.getType() : "");
@@ -110,7 +111,6 @@ public class MainController {
             existing.setType(updatedVehicle.getType());
             existing.setYear(updatedVehicle.getYear());
             existing.setMileage(updatedVehicle.getMileage());
-            existing.setPricing(updatedVehicle.getPricing());
             existing.setFuelType(updatedVehicle.getFuelType());
             existing.setSeatingCapacity(updatedVehicle.getSeatingCapacity());
             existing.setDescription(updatedVehicle.getDescription());

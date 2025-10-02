@@ -17,7 +17,7 @@
     <style>
 
         :root{
-            --header-bg: #2f81cd;   /* header background */
+            --header-bg: #0e7490;   /* header background */
             --header-fg:#ffffff;   /* header text/icons */
             --footer-bg: #2f81cd;   /* footer background */
             --footer-fg:#e5e7eb;   /* footer text/links */
@@ -52,7 +52,7 @@
             fill:currentColor;
         }
         footer a:hover{ opacity:.85; }
-        w
+
             /* Make the Login button pop on dark header (optional) */
         header .btn-primary{
             background-color: #000a3a;
@@ -159,8 +159,7 @@
                             ${errorMessage}
                     </div>
                 </c:if>
-                <%--@elvariable id="Vehicle" type=""--%>
-                <form:form modelAttribute="Vehicle" action="/vehicle_add" method="post" enctype="multipart/form-data">
+                <form:form modelAttribute="vehicle" action="/vehicle_add" method="post" enctype="multipart/form-data">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label text-dark-gray">Brand</label>
@@ -188,7 +187,7 @@
                             <form:input path="mileage" type="number" class="form-control" required="true"/>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label text-dark-gray">Pricing (per day $)</label>
+                            <label class="form-label text-dark-gray">Pricing (per day LKR)</label>
                             <form:input path="pricing" type="number" class="form-control" required="true"/>
                         </div>
                         <div class="col-md-6">

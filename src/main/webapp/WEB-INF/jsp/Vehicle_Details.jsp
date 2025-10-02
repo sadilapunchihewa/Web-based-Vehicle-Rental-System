@@ -17,7 +17,7 @@
     <style>
 
         :root{
-            --header-bg: #2f81cd;   /* header background */
+            --header-bg: #0e7490;   /* header background */
             --header-fg:#ffffff;   /* header text/icons */
             --footer-bg: #2f81cd;   /* footer background */
             --footer-fg:#e5e7eb;   /* footer text/links */
@@ -158,6 +158,7 @@
                         </li>
                     </ul>
                 </div>
+        </div>
         </div>
     </header>
 

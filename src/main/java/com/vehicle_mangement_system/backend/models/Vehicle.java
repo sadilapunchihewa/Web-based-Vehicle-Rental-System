@@ -1,6 +1,7 @@
 package com.vehicle_mangement_system.backend.models;
-
 import jakarta.persistence.*;
+
+import java.math.BigDecimal;
 
 @Entity
 public class Vehicle {
@@ -20,21 +21,7 @@ public class Vehicle {
     private Integer mileage;
 
 
-    private Integer pricing;
-
-
-    private String fuelType;
-
-    private Integer seatingCapacity;
-
-    private String description;
-
-    private String features;
-
-    private String status;
-
-    @Lob
-    private String imageBase64;
+    private BigDecimal pricing;
 
     public Long getId() {
         return id;
@@ -82,6 +69,14 @@ public class Vehicle {
 
     public void setMileage(Integer mileage) {
         this.mileage = mileage;
+    }
+
+    public BigDecimal getPricing() {
+        return pricing;
+    }
+
+    public void setPricing(BigDecimal pricing) {
+        this.pricing = pricing;
     }
 
     public String getFuelType() {
@@ -132,12 +127,18 @@ public class Vehicle {
         this.imageBase64 = imageBase64;
     }
 
-    public void setPricing(Integer pricing) {
-        this.pricing = pricing;
-    }
+    private String fuelType;
+
+    private Integer seatingCapacity;
+
+    private String description;
+
+    private String features;
+
+    private String status;
+
+    @Lob
+    private String imageBase64;
 
 
-    public Integer getPricing() {
-        return pricing;
-    }
 }
