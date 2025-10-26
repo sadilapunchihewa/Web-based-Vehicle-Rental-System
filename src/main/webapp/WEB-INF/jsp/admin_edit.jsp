@@ -4,6 +4,12 @@
 <spring:url value="/admin/update/${admin.userId}" var="updateUrl"/>
 <spring:url value="/admin/list" var="listUrl"/>
 <spring:url value="/admin/dashboard" var="dashboardUrl"/>
+<spring:url value="/admin/list" var="adminListUrl"/>
+<spring:url value="/driver/list" var="driverListUrl"/>
+<spring:url value="/vehicle/list" var="vehicleListUrl"/>
+<spring:url value="/rental/list" var="rentalListUrl"/>
+<spring:url value="/payment/admin/payments" var="financeListUrl"/>
+<spring:url value="/support/admin/tickets" var="customerListUrl"/>
 
 <html>
 <head>
