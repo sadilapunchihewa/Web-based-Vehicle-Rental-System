@@ -2,6 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <spring:url value="/admin/add" var="addUrl"/>
+<spring:url value="/admin/list" var="adminListUrl"/>
+<spring:url value="/driver/list" var="driverListUrl"/>
+<spring:url value="/vehicle/list" var="vehicleListUrl"/>
+<spring:url value="/rental/list" var="rentalListUrl"/>
+<spring:url value="/payment/admin/payments" var="financeListUrl"/>
+<spring:url value="/support/admin/tickets" var="customerListUrl"/>
 
 <html>
 <head>

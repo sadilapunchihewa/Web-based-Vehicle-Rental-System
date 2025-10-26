@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn clean:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(./mvnw.cmd clean compile)",
+      "Bash(./mvnw.cmd compile:*)",
+      "Bash(./mvnw.cmd clean compile:*)",
+      "Bash(./mvnw.cmd spring-boot:run:*)",
+      "Bash(timeout /t 15 /nobreak)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(where sqlcmd)",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -i \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\fix-database-constraints.sql\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -i \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\fix-all-constraints.sql\")",
+      "Bash(dir \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\src\\main\\webapp\\WEB-INF\\jsp\" /b)",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -i \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\update-drivers-schema.sql\")",
+      "Bash(timeout /t 3 /nobreak)",
+      "Bash(dir \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\src\\main\\webapp\\WEB-INF\\jsp\\rental\" /s /b)",
+      "Bash(timeout 15)",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -Q \"SELECT @@VERSION\")",
+      "Bash(sqlcmd -S localhost:1433 -U sa -P 12345678 -Q \"SELECT name FROM sys.databases WHERE name = ''DriveLK''\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -Q \"SELECT name FROM sys.databases WHERE name = ''DriveLK''\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -Q \"EXEC xp_readerrorlog 0, 1, N''''Server is listening on''''\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -i \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\database-init-corrected.sql\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -i \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\database-reinit-fixed.sql\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -d DriveLK -Q \"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ''drivers'' ORDER BY COLUMN_NAME\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -Q \"USE master; ALTER DATABASE DriveLK SET SINGLE_USER WITH ROLLBACK IMMEDIATE; DROP DATABASE DriveLK; CREATE DATABASE DriveLK;\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -d DriveLK -Q \"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ''Users'' ORDER BY COLUMN_NAME\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -i \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\database-complete-schema.sql\")",
+      "Bash(sqlcmd -S localhost -U sa -P 12345678 -d DriveLK -Q \"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = ''BASE TABLE'' ORDER BY TABLE_NAME\")",
+      "Bash(dir customer-support-srcmainjavacomyourcompanyvehiclerental /s /b)",
+      "Bash(timeout 3)",
+      "Bash(dir \"C:\\Users\\LapMart\\IdeaProjects\\Web-based-Vehicle-Rental-System\\src\\main\\webapp\\WEB-INF\\jsp\\driver_dashboard.jsp\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

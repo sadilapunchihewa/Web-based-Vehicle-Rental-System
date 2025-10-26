@@ -7,7 +7,8 @@
 <spring:url value="/driver/list" var="driverListUrl"/>
 <spring:url value="/vehicle/list" var="vehicleListUrl"/>
 <spring:url value="/rental/list" var="rentalListUrl"/>
-<spring:url value="/finance/list" var="financeListUrl"/>
+<spring:url value="/payment/admin/payments" var="financeListUrl"/>
+<spring:url value="/support/admin/tickets" var="customerListUrl"/>
 
 <html>
 <head>

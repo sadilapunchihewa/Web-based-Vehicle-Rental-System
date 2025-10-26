@@ -4,6 +4,12 @@
 <spring:url value="/admin/add" var="addUrl"/>
 <spring:url value="/admin/list" var="listUrl"/>
 <spring:url value="/admin/dashboard" var="dashboardUrl"/>
+<spring:url value="/admin/list" var="adminListUrl"/>
+<spring:url value="/driver/list" var="driverListUrl"/>
+<spring:url value="/vehicle/list" var="vehicleListUrl"/>
+<spring:url value="/rental/list" var="rentalListUrl"/>
+<spring:url value="/payment/admin/payments" var="financeListUrl"/>
+<spring:url value="/support/admin/tickets" var="customerListUrl"/>
 
 <html>
 <head>
@@ -280,7 +286,20 @@
         </div>
         <div class="form-container fade-in">
             <form action="${addUrl}" method="post" class="form-grid">
-                <c:if test="${not empty error}"><div class="error-message">${error}</div></c:if>
+
+                <!-- Show success or error messages -->
+                <c:if test="${not empty successMessage}">
+                <div style="padding:10px; background-color:#d1fae5; color:#065f46; border-radius:6px; margin-bottom:15px;">
+                        ${successMessage}
+                </div>
+                </c:if>
+
+                <c:if test="${not empty error}">
+                <div class="error-message">${error}</div>
+                </c:if>
+
+
+                <form action="${addUrl}" method="post" class="form-grid">
 
                 <div>
                     <label for="userId">User ID (Suggested: ${suggestedUserId})</label>
